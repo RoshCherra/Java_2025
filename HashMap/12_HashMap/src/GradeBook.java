@@ -15,7 +15,7 @@ class GradeBook {
         students.remove(id);
     }
 
-    public void findStudent(String id) {
+    public void findStudent(String id) { // шукаємо студентів за Id
         Student student = students.get(id);
         if (student == null) {
             System.out.println("There is no such student :(");

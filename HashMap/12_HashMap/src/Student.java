@@ -11,24 +11,12 @@ class Student {
         this.grades = new ArrayList<>();
     }
 
-    public String getId() {
+    public String getId() { // дістаємо Id студента
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public ArrayList<Integer> getGrades() {
-        return grades;
-    }
-
-    public void addGrade(int grade) {
-        grades.add(grade);
-    }
-
     @Override
-    public String toString() {
+    public String toString() { // змінюємо метод toString() на зручний нам
         return "Id: " + id + "; Name: " + name + "; Grades: " + grades;
     }
 }
