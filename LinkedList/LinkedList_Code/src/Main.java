@@ -18,5 +18,23 @@ public class Main {
         for (Integer  i : list1 ) {
             System.out.println(i);
         }
+
+        list1.clear();
+        list2.clear();
+        list1.addAll(list2);
+        Collections.sort(list1);
+        for (Integer i : list1) {
+            System.out.println(i);
+        }
+
+        System.out.println();
+
+        list1.clear();
+        list2.add(0);
+        list1.addAll(list2);
+        Collections.sort(list1);
+        for (Integer i : list1) {
+            System.out.println(i);
+        }
     }
 }
