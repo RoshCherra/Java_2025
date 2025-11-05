@@ -15,6 +15,10 @@ class Student {
         return id;
     }
 
+    public void addGrade(int grade) { // дістаємо оцінку студента
+        grades.add(grade);
+    }
+
     @Override
     public String toString() { // змінюємо метод toString() на зручний нам
         return "Id: " + id + "; Name: " + name + "; Grades: " + grades;
