@@ -2,37 +2,36 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {  // перевіримо чи працють створені класи коректно
     public static void main(String[] args) {
-        GradeBook gradeBook = new GradeBook(); // створили книгу
+        Inventory inventory = new Inventory(); // створили інвентар
 
-        // стоврюємо студентів
-        Student s1 = new Student("001", "Iryna");
-        s1.addGrade(100);
-        s1.addGrade(90);
-        Student s2 = new Student("002", "Kate");
-        s2.addGrade(99);
-        Student s3 = new Student("003", "John");
-        s3.addGrade(99);
-        s3.addGrade(100);
-        s3.addGrade(60);
+        // стоврюємо товари
+        Product p1 = new Product("Eb1", "Bread");
+        p1.addQuantity(7);
+        Product p2 = new Product("Hk2", "Fork");
+        p2.addQuantity(10);
+        Product p3 = new Product("Em1", "Milk");
+        p3.addQuantity(5);
 
-        // додаємо студентів
-        gradeBook.addStudent(s1);
-        gradeBook.addStudent(s2);
-        gradeBook.addStudent(s3);
+        // додаємо товари
+        inventory.addProduct(p1);
+        inventory.addProduct(p2);
+        inventory.addProduct(p3);
 
-        // виводимо студентів
-        System.out.println("GradeBook:");
-        gradeBook.printStudents();
+        // виводимо товари
+        System.out.println("Inventory:");
+        inventory.printProduct();
 
-        // шукаємо студента
-        gradeBook.findStudent("001");
-        gradeBook.findStudent("005");
-        gradeBook.findStudent("002");
+        // шукаємо товар
+        System.out.println("Let's try to find some products:");
+        inventory.findProduct("Em1");
+        inventory.findProduct("Eb1");
+        inventory.findProduct("Gm6");
 
-        // видаляємо студента
-        gradeBook.removeStudent("003");
-        System.out.println("GradeBook:");
-        gradeBook.printStudents();
+        // видаляємо товар
+        System.out.println("Let's delete product Em1:");
+        inventory.removeProduct("Em1");
+        System.out.println("Inventory:");
+        inventory.printProduct();
 
     }
 }
