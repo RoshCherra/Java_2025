@@ -1,5 +1,5 @@
 class Solution {
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode tmp1 = list1;
         ListNode tmp2 = list2;
         ListNode resulthead;
